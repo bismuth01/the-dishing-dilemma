@@ -19,14 +19,12 @@
 
 #choice-container {
     width: 70%;
-    border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 #text-box {
-    border: 2px solid red;
     width: 80%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
