@@ -26,7 +26,7 @@ function changeBackground(imageUrl) {
   setTimeout(() => {
     document.getElementById("game-container").style.backgroundImage =
       `url(${imageUrl})`;
-  }, 1000);
+  }, 4000);
 }
 
 function showText(text) {
