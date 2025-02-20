@@ -23,10 +23,8 @@ function startGame() {
 }
 
 function changeBackground(imageUrl) {
-  setTimeout(() => {
-    document.getElementById("game-container").style.backgroundImage =
-      `url(${imageUrl})`;
-  }, 4000);
+  document.getElementById("game-container").style.backgroundImage =
+    `url(${imageUrl})`;
 }
 
 function showText(text) {
@@ -60,19 +58,25 @@ function choose(option) {
   } else if (option === "closeTap") {
     changeBackground("./images/closed-tap.jpg");
     showText("You close the tap...");
-    changeBackground("./images/hallway-door.jpg");
-    showChoices([
-      { option: "answerDoor", text: "Answer the Door" },
-      { option: "askWho", text: "Ask who's at the door" },
-    ]);
+    showChoices([]);
+    setTimeout(() => {
+      changeBackground("./images/hallway-door.jpg");
+      showChoices([
+        { option: "answerDoor", text: "Answer the Door" },
+        { option: "askWho", text: "Ask who's at the door" },
+      ]);
+    }, 3000);
   } else if (option === "finishDishes") {
     changeBackground("./images/finish-dishes.jpg");
     showText("You finish the dishes...");
-    changeBackground("./images/hallway-door.jpg");
-    showChoices([
-      { option: "answerDoor", text: "Answer the Door" },
-      { option: "askWho", text: "Ask who's at the door" },
-    ]);
+    showChoices([]);
+    setTimeout(() => {
+      changeBackground("./images/hallway-door.jpg");
+      showChoices([
+        { option: "answerDoor", text: "Answer the Door" },
+        { option: "askWho", text: "Ask who's at the door" },
+      ]);
+    }, 3000);
   } else if (option === "takePackage") {
     if (!wasChoiceMade("finishDishes")) {
       changeBackground("./images/sign-paper.jpg");
